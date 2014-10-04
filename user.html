@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<link href="css/user.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="js/user.js"></script>
+</head>
+<body class="body-class" ng-app="userApp" ng-controller="userController">
+	<div class="header">
+		<div class="header-logo">O联盟</div>
+		<ul class="header-ul">
+			<li class="header-li"><a href="index.html">新消息</a></li>
+			<li class="header-li"><a href="user.html">个人中心</a></li>
+			<li class="header-li"><a href="lm.html">加入联盟</a></li>
+			<li class="header-li"><a href="m.html">附近的人</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="sidebar">
+			<ul class="sidebar-ul">
+				<li class="sidebar-li" ng-click="curr_show='cv'">
+					简历
+				</li>
+				<li class="sidebar-li" ng-click="curr_show='ps'">
+					私人空间
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div ng-show="curr_show=='cv'">
+				姓名：
+				性别：
+				毕业院校：
+				工作经历：
+			</div>
+			<div ng-show="curr_show=='ps'">
+				<div ng-include src="'/user/ps.html'"></div>
+			</div>
+		</div>
+        <div class="footer">
+        联系我们
+        </div>
+	</div>
+</body>
+</html>

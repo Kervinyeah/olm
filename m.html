@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>附近的人</title>
+	<link rel="stylesheet" type="text/css" href="css/m.css">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="js/m.js"></script>
+</head>
+
+<body class="body-class">
+	<div class="header">
+		<div class="header-logo">O联盟</div>
+		<ul class="header-ul">
+			<li class="header-li"><a href="index.html">新消息</a></li>
+			<li class="header-li"><a href="user.html">个人中心</a></li>
+			<li class="header-li"><a href="lm.html">加入联盟</a></li>
+			<li class="header-li"><a href="m.html">附近的人</a></li>
+		</ul>
+	</div>
+	<div class="container" ng-app="mApp" ng-controller="mController">
+		<div class="filter">
+			<div>
+				地区：
+			</div>
+			<div>
+				话题：
+			</div>
+			<div>
+				性别：
+			</div>
+			<div>
+				年龄：
+			</div>
+			<div>
+				<button class="new-m-btn">发布信息</button>
+			</div>				
+		</div>
+		<div class="outcome">
+			<ul class="outcome-ul">
+				<li class="outcome-head">
+					<div class="outcome-head-hp">
+						头像
+					</div>
+					<div class="outcome-head-name">
+						昵称
+					</div>
+					<div class="outcome-head-dsc">
+						简介
+					</div>
+					<div class="outcome-head-place">
+						地点
+					</div>
+					<div class="outcome-head-type">
+						类型
+					</div>
+					<div class="outcome-head-rank">
+						等级
+					</div>
+					<div class="outcome-head-call">
+						联系
+					</div>
+				</li>
+				<li class="outcome-li" ng-repeat="m in ms">
+					<div class="m-hp">
+						<img src="imgs/{{$index}}.png" style="height: 100%; width: 100%;">
+					</div>
+					<div class="m-name">
+						{{m.name}}
+					</div>
+					<div class="m-dsc">
+						{{m.dsc}}
+					</div>
+					<div class="m-place">
+						{{m.place}}
+					</div>
+					<div class="m-type">
+						{{m.type}}
+					</div>
+					<div class="m-rank">
+						{{m.rank}}
+					</div>
+					<div type="m-call">
+						<button>联系此人</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="footer">
+			联系我们
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>O联盟</title>
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body class="body-class" ng-app="indexApp" ng-controller="indexController">
+	<div class="header">
+		<div class="header-logo">O联盟</div>
+		<ul class="header-ul">
+			<li class="header-li"><a href="index.html">新消息</a></li>
+			<li class="header-li"><a href="user.html">个人中心</a></li>
+			<li class="header-li"><a href="lm.html">加入联盟</a></li>
+			<li class="header-li"><a href="m.html">附近的人</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="sidebar">
+			<ul>
+				<li>
+					特别关注
+				</li>
+				<li>
+					我的联盟
+					<ul>
+						<li  ng-repeat="lm in mylm" ng-click="selectlm"class="siderbar-li">
+							<strong>{{lm.name}}</strong>
+						</li>
+					</ul>
+				</li>
+
+			</ul>
+		</div>
+		<div class="content">
+			<ul class="content-ul">
+				<li  ng-repeat="n in news" class="news" ng-class="{selected: $index==selected_news}" ng-click="selectNews($index)">
+					<div ng-if="n.type=='message'">
+						<div class="news-portrait">
+						  <img src="imgs/{{$index}}.png" width="100" height="100" alt="妙蛙种子">
+						</div>
+						<div class="news-sender">{{n.sender}}<span class="news-sender-do">&nbsp;&nbsp;&nbsp;发布了一条消息</span></div>
+						<div class="news-message">{{n.message}}</div>
+					</div>
+					<div ng-if="n.type=='activity'">
+						<div class="news-portrait">
+						  <img src="imgs/{{$index}}.png" width="100" height="100" alt="妙蛙种子">
+						</div>
+						<div class="news-sender">{{n.sender}}<span class="news-sender-do">&nbsp;&nbsp;&nbsp;发布了一个活动信息</span></div>
+						{{n.aName}}
+						<div class="news-message">{{n.aContent}}</div>
+					</div>
+					<div ng-if="n.type=='picture'">
+					</div>
+				</li>
+			</ul>
+		</div>
+        <div class="footer">
+        联系我们
+        </div>
+	</div>
+</body>
+</html>

@@ -1,6 +1,13 @@
 olm
 ===
-test by zhou  
-push test  
-test by aliyun  
+协同工作方法 
+---
+【工作步骤：】  
+0. 在自己电脑上工作，对olm项目进行修改  
+1. 修改或添加完毕后执行git相关命令，使得github上面是最新版本  
+2. ssh登陆我们的服务器，输入updateolm使网站更新
+
+【可能出现的问题：】  
+如果网页访问不了可能需要重修手动重启一下网页服务器  
+直接ssh登陆我们的服务器，输入restartolm即可  
 

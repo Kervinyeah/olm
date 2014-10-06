@@ -30,6 +30,19 @@
 		exit;
 	}
 	
+	mysqli_close($con);
+	
+	// remember
+	if ($_POST['remember'] == "yes")
+	{
+		setcookie("phone", $_POST['phone'], time()+3600*24*20);
+		setcookie("password", $_POST['password'], time()+3600*24*20);
+	}
+	
+	echo "<script type='text/javascript'>";  
+	echo "window.location.href='index2.html'";  
+	echo "</script>";   
+	/*
 	echo $_POST['remember']."<br />";
 	echo "登陆成功！"."<br />";
 	echo "Id : ".$row['id']."<br />";
@@ -37,8 +50,7 @@
 	echo "Phone : ".$row['phone']."<br />";
 	echo "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";	
 	echo "</p>";
-	
-	mysqli_close($con);
+	*/
 ?>
 </body>
 </html>

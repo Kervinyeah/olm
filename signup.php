@@ -34,13 +34,20 @@
 	}
 	$row = mysqli_fetch_array($result);
 	
+	mysqli_close($con);
+	
+	echo "<script type='text/javascript'>";  
+	echo "window.location.href='index.html'";  
+	echo "</script>";   
+	/*
 	echo "注册成功！"."<br />";
 	echo "Id : ".$row['id']."<br />";
 	echo "Name : ".$row['name']."<br />";
 	echo "Phone : ".$row['phone']."<br />";
 	echo "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";	
 	echo "</p>";					
-	mysqli_close($con);
+	*/
+	
 ?>
 </body>
 </html>

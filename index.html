@@ -1,4 +1,11 @@
-
+<?php
+if (isset($_COOKIE["phone"]) && isset($_COOKIE["password"]))
+{
+	echo "<script type='text/javascript'>";  
+	echo "window.location.href='index2.html'";  
+	echo "</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -81,7 +88,7 @@
 					<input type="text" class="input-block-level" placeholder="手机号码" name="phone">
 					<input type="password" class="input-block-level" placeholder="密码" name="password">
 					<label class="checkbox">
-					<input type="checkbox" value="remember-me" name="remember">记住我
+					<input type="checkbox" value="yes" name="remember">记住我
 					</label>
 					<button class="btn btn-large btn-primary" type="submit">登陆</button>
 				</form>

@@ -9,6 +9,14 @@
 </head>
 
 <body class="body-class" ng-app="indexApp" ng-controller="indexController">
+
+<script>
+var phone = document.cookie.split(";")[0].split("=")[1];
+var password = document.cookie.split(";")[1].split("=")[1];
+var word = "welcome! phone = " + phone + "; password = " + password; 
+alert(word);
+</script>
+
 	<div class="header">
 		<div class="header-logo">O联盟</div>
 		<ul class="header-ul">

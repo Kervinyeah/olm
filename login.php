@@ -30,6 +30,7 @@
 		exit;
 	}
 	
+	echo $_POST['remember']."<br />";
 	echo "登陆成功！"."<br />";
 	echo "Id : ".$row['id']."<br />";
 	echo "Name : ".$row['name']."<br />";

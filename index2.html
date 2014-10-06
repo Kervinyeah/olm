@@ -10,11 +10,14 @@
 
 <body class="body-class" ng-app="indexApp" ng-controller="indexController">
 
-<script>
-var phone = document.cookie.split(";")[0].split("=")[1];
-var password = document.cookie.split(";")[1].split("=")[1];
+<script language="javascript">
+var phone = document.cookie.indexOf("phone=");
+var password = document.cookie.indexOf("password=");
 var word = "welcome! phone = " + phone + "; password = " + password; 
-alert(word);
+if (phone != -1 && password != -1)
+	alert(word);
+else
+	alert("登陆失败!");
 </script>
 
 	<div class="header">

@@ -59,15 +59,13 @@
 
   <body>
 
-  <?php
-	if (isset($_COOKIE["phone"]) && isset($_COOKIE["password"]))
-	{
-		echo "<script type='text/javascript'>";  
-		echo "window.location.href='index2.html'";  
-		echo "</script>";
-	}
-	?>
-
+  <script language="javascript">
+	var phone = document.cookie.indexOf("phone=");
+	var password = document.cookie.indexOf("password=");
+	if (phone != -1 && password != -1)
+		window.location.href='index2.html';
+  </script>
+  
     <div class="container">
 		
 		<div class="row">

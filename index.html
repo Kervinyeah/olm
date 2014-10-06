@@ -60,8 +60,8 @@
   <body>
 
   <script language="javascript">
-	var phone = document.cookie.indexOf("phone=");
-	var password = document.cookie.indexOf("password=");
+	var phone = document.cookie.split(";")[0].split("=")[1];
+	var password = document.cookie.split(";")[1].split("=")[1];
 	if (phone != -1 && password != -1)
 		window.location.href='index2.html';
   </script>

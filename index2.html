@@ -11,9 +11,10 @@
 <body class="body-class" ng-app="indexApp" ng-controller="indexController">
 
 <script language="javascript">
+var username=document.cookie.split(";")[0].split("=")[1];
 var phone = document.cookie.indexOf("phone=");
 var password = document.cookie.indexOf("password=");
-var word = "welcome! phone = " + phone + "; password = " + password; 
+var word = "welcome!" + username + " phone = " + phone + "; password = " + password; 
 if (phone != -1 && password != -1)
 	alert(word);
 else

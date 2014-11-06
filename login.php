@@ -50,7 +50,7 @@
 	
 	
 	echo "<script type='text/javascript'>";
-	echo "alert('".$str."'不存在该手机!');";
+	echo "alert('".$str."');";
 	echo "window.location.href='index2.html'";  
 	echo "</script>";   
 	

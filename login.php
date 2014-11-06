@@ -47,6 +47,10 @@
 	$str .= "Phone : ".$row['phone']."<br />";
 	$str .= "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";
 	
+	echo $str;
+	
+	echo "end";
+	
 	echo "<script type='text/javascript'>"; 
 	echo "alert(\"hehe\")";
 	echo "window.location.href='index2.html'";  

@@ -40,14 +40,14 @@
 	}
 	
 	
-	/*
+	
 	$str = $_POST['remember']."<br />";
 	$str .= "登陆成功！"."<br />";
 	$str .= "Id : ".$row['id']."<br />";
 	$str .= "Name : ".$row['name']."<br />";
 	$str .= "Phone : ".$row['phone']."<br />";
 	$str .= "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";
-	*/
+	
 	
 	echo "<script type='text/javascript'>";
 	echo "alert('".$str."'不存在该手机!');";

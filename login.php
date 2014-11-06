@@ -40,7 +40,7 @@
 	}
 	
 	
-	$str = "欢迎 :\nId : ".$row['id']."\nName : ".$row['name']."Phone : ".$row['phone']."Sex : ".($row['sex'] == 0)?("男"):("女");
+	$str = "欢迎！Id:".$row['id']." Name:".$row['name']." Phone:".$row['phone']." Sex:".($row['sex'] == 0)?("男"):("女");
 	
 	
 	echo "<script type='text/javascript'>";

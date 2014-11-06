@@ -32,7 +32,7 @@
 	
 	mysqli_close($con);
 	
-	// remember
+	// remember 20 days
 	if ($_POST['remember'] == "yes")
 	{
 		setcookie("phone", $_POST['phone'], time()+3600*24*20);
@@ -40,19 +40,17 @@
 	}
 	
 	
+	/*
 	$str = $_POST['remember']."<br />";
 	$str .= "登陆成功！"."<br />";
 	$str .= "Id : ".$row['id']."<br />";
 	$str .= "Name : ".$row['name']."<br />";
 	$str .= "Phone : ".$row['phone']."<br />";
 	$str .= "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";
+	*/
 	
-	echo $str;
-	
-	echo "end";
-	
-	echo "<script type='text/javascript'>"; 
-	echo "alert(\"hehe\")";
+	echo "<script type='text/javascript'>";
+	echo "alert('".$str."'不存在该手机!');";
 	echo "window.location.href='index2.html'";  
 	echo "</script>";   
 	

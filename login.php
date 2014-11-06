@@ -39,18 +39,19 @@
 		setcookie("password", $_POST['password'], time()+3600*24*20);
 	}
 	
-	echo "<script type='text/javascript'>";  
+	
+	$str = $_POST['remember']."<br />";
+	$str .= "登陆成功！"."<br />";
+	$str .= "Id : ".$row['id']."<br />";
+	$str .= "Name : ".$row['name']."<br />";
+	$str .= "Phone : ".$row['phone']."<br />";
+	$str .= "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";
+	
+	echo "<script type='text/javascript'>"; 
+	echo "alert(".$str.")";
 	echo "window.location.href='index2.html'";  
 	echo "</script>";   
-	/*
-	echo $_POST['remember']."<br />";
-	echo "登陆成功！"."<br />";
-	echo "Id : ".$row['id']."<br />";
-	echo "Name : ".$row['name']."<br />";
-	echo "Phone : ".$row['phone']."<br />";
-	echo "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";	
-	echo "</p>";
-	*/
+	
 ?>
 </body>
 </html>

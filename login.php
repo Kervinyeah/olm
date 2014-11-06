@@ -48,7 +48,7 @@
 	$str .= "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";
 	
 	echo "<script type='text/javascript'>"; 
-	echo "alert(".$str.")";
+	echo "alert(\"hehe\")";
 	echo "window.location.href='index2.html'";  
 	echo "</script>";   
 	

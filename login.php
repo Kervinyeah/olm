@@ -40,13 +40,7 @@
 	}
 	
 	
-	
-	$str = $_POST['remember']."<br />";
-	$str .= "登陆成功！"."<br />";
-	$str .= "Id : ".$row['id']."<br />";
-	$str .= "Name : ".$row['name']."<br />";
-	$str .= "Phone : ".$row['phone']."<br />";
-	$str .= "Sex : ".($row['sex'] == 0)?("男"):("女")."<br />";
+	$str = "欢迎 :\nId : ".$row['id']."\nName : ".$row['name']."Phone : ".$row['phone']."Sex : ".($row['sex'] == 0)?("男"):("女");
 	
 	
 	echo "<script type='text/javascript'>";
